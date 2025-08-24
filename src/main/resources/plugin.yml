@@ -1,0 +1,18 @@
+name: SpctrmCore
+main: com.spectrum.spctrmcore.SpctrmCorePlugin
+version: 1.0.0
+author: Spectrum Studios
+website: https://github.com/Spectrum-Studios/SpctrmCore
+load: POSTWORLD
+commands:
+  spctrmcore:
+    description: Root command for SpctrmCore
+    aliases: [spctrm, core]
+    usage: "/spctrmcore help"
+permissions:
+  spctrm.use:
+    description: Allows using /spctrmcore basic commands
+    default: true
+  spctrm.admin:
+    description: Allows admin subcommands
+    default: op

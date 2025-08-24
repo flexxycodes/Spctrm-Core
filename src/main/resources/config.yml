@@ -1,0 +1,9 @@
+messages:
+  prefix: "&8[&dSpctrm&8]&r "
+  no_permission: "&cYou don't have permission to do that."
+  reloaded: "&aConfiguration reloaded."
+  pong: "&aPong! &7Your ping is &f%ping%ms&7."
+  healed: "&aYou have been healed."
+  join: "&dWelcome, &b%player%&d!"
+settings:
+  joinMessage: true

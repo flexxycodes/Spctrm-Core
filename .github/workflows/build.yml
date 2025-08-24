@@ -1,0 +1,26 @@
+name: Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '8'
+          cache: 'maven'
+      - name: Build with Maven
+        run: mvn -B -e -V -DskipTests clean package
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: spctrm-core-jar
+          path: target/*.jar
